@@ -1,4 +1,7 @@
 import org.junit.jupiter.api.Test;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -34,24 +37,42 @@ public class Analysis {
     public void sizeOfFormula() throws InvalidNumberOfPropositionsException, IOException {
         InputGenerator inputGenerator = new InputGenerator();
         ArrayList<Double> validityProportions = new ArrayList<>();  // Validity Proportion of Element = (# valid formulas) / (# formulas)
+        Prover prover = new Prover(false);
 
         System.out.println("----- Starting Analysis based on the size of formulas -----");
-        for (int size = 1; size <= 100; size++) {
-            inputGenerator.generateInputFile(10000, size, 2, "K");
-            Prover prover = new Prover(false);
+        for (int size = 28; size <= 30; size++) {
+            inputGenerator.generateInputFile(100000, size, 2, "K");
             prover.proveInputFile();
             String rawOutput = prover.readOutputFile();
-            ArrayList<Integer> output = parseOutput(rawOutput);
-            validityProportions.add(calculateValidityProportion(output));
-            System.out.println(size + " % completed");
-        }
-
-        System.out.println("\n----- Results -----");
-        System.out.println("Size of " + 1 + ": " + (validityProportions.get(0)*100) + "%");
-        for (int i = 2; i <= 100; i++) {
-            System.out.println("Size of " + i + ": " + (validityProportions.get(i-1)*100) + "%");
+            validityProportions.add(calculateValidityProportion(parseOutput(rawOutput)));
+            write(("Size of " + size + ": " + (calculateValidityProportion(parseOutput(rawOutput))*100) + "%\n"), "results/size_of_formula.txt");
+            System.out.println("Size " + size + " completed");
         }
     }
+
+    // Does not work due to insufficient heap space
+//    // 2 propositions, system K
+//    @Test
+//    public void sizeOfFormula() throws InvalidNumberOfPropositionsException, IOException {
+//        InputGenerator inputGenerator = new InputGenerator();
+//        ArrayList<Double> validityProportions = new ArrayList<>();  // Validity Proportion of Element = (# valid formulas) / (# formulas)
+//        Prover prover = new Prover(false);
+//
+//        System.out.println("----- Starting Analysis based on the size of formulas -----");
+//        for (int size = 1; size <= 100; size++) {
+//            inputGenerator.generateInputFile(1000, size, 2, "K");
+//            prover.proveInputFile();
+//            String rawOutput = prover.readOutputFile();
+//            validityProportions.add(calculateValidityProportion(parseOutput(rawOutput)));
+//            System.out.println(size + " % completed");
+//        }
+//
+//        System.out.println("\n----- Results -----");
+//        System.out.println("Size of " + 1 + ": " + (validityProportions.get(0)*100) + "%");
+//        for (int i = 2; i <= 100; i++) {
+//            System.out.println("Size of " + i + ": " + (validityProportions.get(i-1)*100) + "%");
+//        }
+//    }
 
     private static double calculateValidityProportion(ArrayList<Integer> output) {
         int validFormulas = 0;
@@ -84,5 +105,11 @@ public class Analysis {
         }
 
         return output;
+    }
+
+    private void write(String string, String path) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(path, true));
+        writer.write(string);
+        writer.close();
     }
 }
