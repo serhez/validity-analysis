@@ -1,5 +1,5 @@
 
----- System K, 2 propositions, sample of 100,000 formulas per size ----
+---- System K, 2 propositions, sample of 100,000 formulas per instance ----
 
 Size of 1: 0.0%
 Size of 2: 0.0%
@@ -29,3 +29,45 @@ Size of 25: 1.569%
 Size of 26: 1.614%
 Size of 27: 1.599%
 Size of 28: 1.568%
+Size of 29: 1.52%
+Size of 30: 1.6150000000000002%
+Size of 31: 1.603%
+Size of 32: 1.545%
+Size of 33: 1.551%
+Size of 34: 1.6049999999999998%
+Size of 35: 1.5559999999999998%
+Size of 36: 1.63%
+Size of 37: 1.517%
+Size of 38: 1.569%
+Size of 39: 1.496%
+Size of 40: 1.6199999999999999%
+Size of 41: 1.532%
+Size of 42: 1.546%
+Size of 43: 1.5730000000000002%
+Size of 44: 1.5599999999999998%
+Size of 45: 1.567%
+Size of 46: 1.5970000000000002%
+Size of 47: 1.568%
+Size of 48: 1.5730000000000002%
+Size of 49: 1.609%
+Size of 50: 1.5310000000000001%
+Size of 51: 1.5%
+Size of 52: 1.542%
+Size of 53: 1.5779999999999998%
+Size of 54: 1.5959999999999999%
+Size of 55: 1.6039999999999999%
+Size of 56: 1.633%
+Size of 57: 1.614%
+Size of 58: 1.577%
+Size of 59: 1.551%
+Size of 60: 1.514%
+Size of 61: 1.601%
+Size of 62: 1.616%
+Size of 63: 1.6729999999999998%
+Size of 64: 1.505%
+Size of 65: 1.636%
+Size of 66: 1.532%
+Size of 67: 1.646%
+Size of 68: 1.5810000000000002%
+Size of 69: 1.533%
+Size of 70: 1.546%

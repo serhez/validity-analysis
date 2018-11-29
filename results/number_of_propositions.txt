@@ -1,0 +1,29 @@
+
+---- System K, size 30, sample of 100,000 formulas per instance ----
+
+1 propositions: 2.876%
+2 propositions: 1.576%
+3 propositions: 1.107%
+4 propositions: 0.781%
+5 propositions: 0.625%
+6 propositions: 0.5700000000000001%
+7 propositions: 0.524%
+8 propositions: 0.42%
+9 propositions: 0.33999999999999997%
+10 propositions: 0.33899999999999997%
+11 propositions: 0.299%
+12 propositions: 0.3%
+13 propositions: 0.269%
+14 propositions: 0.243%
+15 propositions: 0.23800000000000002%
+16 propositions: 0.209%
+17 propositions: 0.194%
+18 propositions: 0.191%
+19 propositions: 0.181%
+20 propositions: 0.163%
+21 propositions: 0.158%
+22 propositions: 0.164%
+23 propositions: 0.148%
+24 propositions: 0.13699999999999998%
+25 propositions: 0.146%
+26 propositions: 0.127%
