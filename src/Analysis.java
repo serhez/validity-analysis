@@ -35,7 +35,7 @@ public class Analysis {
         Prover prover = new Prover(false);
         System.out.println("----- Starting analysis based on the size of formulas -----\n");
         for (int size = 100; size <= 100; size++) {
-            double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(100000, size, 2, new ModalSystem("K")));
+            double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(20, size, 2, new ModalSystem("K")));
             write(("Size of " + size + ": " + (validityProportion * 100) + "%\n"), "results/size_of_formula.txt");
             System.out.println("\n-- Size " + size + " completed --\n");
         }
