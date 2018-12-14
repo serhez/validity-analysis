@@ -31,7 +31,7 @@ public class Analysis {
 //        }
 //    }
 
-    public static void main(String[] args) throws InvalidNumberOfPropositionsException, IOException, UnrecognizableFormulaException {
+    public static void main(String[] args) throws InvalidNumberOfPropositionsException, IOException, UnrecognizableFormulaException, IncompatibleFrameConditionsException {
         Prover prover = new Prover(false);
         System.out.println("----- Starting analysis based on the size of formulas -----\n");
         for (int size = 100; size <= 100; size++) {
