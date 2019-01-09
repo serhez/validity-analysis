@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,8 +34,8 @@ public class Analysis {
         Prover prover = new Prover(false);
         System.out.println("----- Starting analysis based on the size of formulas -----\n");
         for (int size = 100; size <= 100; size++) {
-            double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(20, size, 2, new ModalSystem("K")));
-            write(("Size of " + size + ": " + (validityProportion * 100) + "%\n"), "results/size_of_formula.txt");
+            double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(30000, size, 2, new ModalSystem("K")));
+            write(("Size of " + size + ": " + (validityProportion * 100) + "%\n"), "results/size_of_formula.txt"); // Writes one at a time for safety against a memory blow-up
             System.out.println("\n-- Size " + size + " completed --\n");
         }
     }
