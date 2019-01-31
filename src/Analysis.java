@@ -11,9 +11,11 @@ public class Analysis {
         Prover prover = new Prover(false, true);
         String outputPath = "Validity-Analysis/results/size_of_formula.txt";
 
-        int minSize = 10000;
-        int maxSize = 10000;
-        int samples = 1000;
+        // Variables
+        int repetitions = 1;   // Useful if minSize = maxSize, for large sizes (default is 1)
+        int minSize = 215;
+        int maxSize = 300;
+        int samples = 10000;
         int maxPropositions = 2;
         String system = "K";
         String setOfConnectives = "~ , | , <>";
@@ -27,13 +29,15 @@ public class Analysis {
 
         System.out.println("\n======== Starting analysis based on the size of formulas ========\n");
 
-        for (int size = minSize; size <= maxSize; size++) {
-            double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(samples, size,
-                    maxPropositions, new ModalSystem(system), false));
-            write(("Size " + size + ": " + (validityProportion * 100) + "%\n"), outputPath); // Writes one at a time for safety against a memory blow-up
-            System.out.println("\n===========================================");
-            System.out.println("\t\t\t SIZE " + size + " COMPLETED");
-            System.out.println("===========================================\n\n");
+        for (int i = 0; i < repetitions; i++) {
+            for (int size = minSize; size <= maxSize; size++) {
+                double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(samples, size,
+                        maxPropositions, new ModalSystem(system), false));
+                write(("Size " + size + ": " + (validityProportion * 100) + "%\n"), outputPath); // Writes one at a time for safety against a memory blow-up
+                System.out.println("\n===========================================");
+                System.out.println("\t\t\t SIZE " + size + " COMPLETED");
+                System.out.println("===========================================\n\n");
+            }
         }
     }
 
