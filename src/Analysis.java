@@ -1,6 +1,7 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Analysis {
@@ -13,12 +14,13 @@ public class Analysis {
 
         // Variables
         int repetitions = 1;   // Useful if minSize = maxSize, for large sizes (default is 1)
-        int minSize = 215;
+        int jumpSize = 1;
+        int minSize = 5;
         int maxSize = 300;
         int samples = 10000;
         int maxPropositions = 2;
         String system = "K";
-        String setOfConnectives = "~ , | , <>";
+        String setOfConnectives = "~ , | , &, ->, <->, <>, []";
 
         String separator = "=================================================";
         String header = "\n\n\n\n" + separator + "\n\t\t\t----- NEW ANALYSIS -----" +
@@ -29,11 +31,16 @@ public class Analysis {
 
         System.out.println("\n======== Starting analysis based on the size of formulas ========\n");
 
-        for (int i = 0; i < repetitions; i++) {
+        Prover.Results results;
+        DecimalFormat formatter = new DecimalFormat("#0.000");
+        for (int i = 0; i < repetitions; i += jumpSize) {
             for (int size = minSize; size <= maxSize; size++) {
-                double validityProportion = calculateValidityProportion(prover.proveRandomFormulas(samples, size,
-                        maxPropositions, new ModalSystem(system), false));
-                write(("Size " + size + ": " + (validityProportion * 100) + "%\n"), outputPath); // Writes one at a time for safety against a memory blow-up
+                results = prover.proveRandomFormulas(samples, size,
+                        maxPropositions, new ModalSystem(system), false);
+                double validityProportion = calculateValidityProportion(results.getResults());
+                write(("Size " + size + ": " + formatter.format((validityProportion * 100)) + "% valid; " + formatter.format(results.getAbortionRate()) +
+                        "% abortion rate after " + formatter.format(results.getTimeoutLimit()) + " seconds\n"),
+                        outputPath);  // Writes one at a time for safety against a memory blow-up
                 System.out.println("\n===========================================");
                 System.out.println("\t\t\t SIZE " + size + " COMPLETED");
                 System.out.println("===========================================\n\n");
