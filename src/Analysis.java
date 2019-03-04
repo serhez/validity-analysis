@@ -7,20 +7,21 @@ import java.util.ArrayList;
 public class Analysis {
 
     public static void main(String[] args) throws InvalidNumberOfPropositionsException, IOException,
-            UnrecognizableFormulaException, IncompatibleFrameConditionsException {
+            UnrecognizableFormulaException, IncompatibleFrameConditionsException, NegativeTimeoutException {
 
-        Prover prover = new Prover(false, true);
+        Prover prover = new Prover();
+        prover.enableProtectedMode(3000);  // 3 seconds timeout
         String outputPath = "Validity-Analysis/results/size_of_formula.txt";
 
         // Variables
         int repetitions = 1;   // Useful if minSize = maxSize, for large sizes (default is 1)
         int jumpSize = 1;
-        int minSize = 5;
+        int minSize = 59;
         int maxSize = 300;
         int samples = 10000;
         int maxPropositions = 2;
         String system = "K";
-        String setOfConnectives = "~ , | , &, ->, <->, <>, []";
+        String setOfConnectives = "~ , |";
 
         String separator = "=================================================";
         String header = "\n\n\n\n" + separator + "\n\t\t\t----- NEW ANALYSIS -----" +
