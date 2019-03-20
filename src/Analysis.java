@@ -16,12 +16,12 @@ public class Analysis {
         // Variables
         int repetitions = 1;   // Useful if minSize = maxSize, for large sizes (default is 1)
         int jumpSize = 1;
-        int minSize = 1000;
-        int maxSize = 2000;
+        int minSize = 1;
+        int maxSize = 200;
         int samples = 10000;
-        int maxPropositions = 2;
+        int maxPropositions = 1;
         String system = "K";
-        String setOfConnectives = "all -testing- DONT USE!";
+        String setOfConnectives = "~, |";
 
         String separator = "=================================================";
         String header = "\n\n\n\n" + separator + "\n\t\t\t----- NEW ANALYSIS -----" +
