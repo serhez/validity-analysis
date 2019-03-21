@@ -1104,3 +1104,72 @@ Size 142: 51.750% valid; 0.000% abortion rate after 3.000 seconds
 Size 143: 52.100% valid; 0.000% abortion rate after 3.000 seconds
 Size 144: 52.080% valid; 0.000% abortion rate after 3.000 seconds
 Size 145: 52.470% valid; 0.000% abortion rate after 3.000 seconds
+
+
+
+
+=================================================
+			----- NEW ANALYSIS -----
+Samples = 10000
+Max # of propositions = 1
+System = K
+Set of connectives = ~, |
+=================================================
+Size 146: 52.770% valid; 0.000% abortion rate after 3.000 seconds
+Size 147: 52.150% valid; 0.000% abortion rate after 3.000 seconds
+Size 148: 52.390% valid; 0.000% abortion rate after 3.000 seconds
+Size 149: 51.960% valid; 0.000% abortion rate after 3.000 seconds
+Size 150: 52.110% valid; 0.000% abortion rate after 3.000 seconds
+Size 151: 52.540% valid; 0.000% abortion rate after 3.000 seconds
+Size 152: 52.450% valid; 0.000% abortion rate after 3.000 seconds
+Size 153: 53.230% valid; 0.000% abortion rate after 3.000 seconds
+Size 154: 52.350% valid; 0.000% abortion rate after 3.000 seconds
+Size 155: 52.870% valid; 0.000% abortion rate after 3.000 seconds
+Size 156: 52.660% valid; 0.000% abortion rate after 3.000 seconds
+Size 157: 52.860% valid; 0.000% abortion rate after 3.000 seconds
+Size 158: 52.920% valid; 0.000% abortion rate after 3.000 seconds
+Size 159: 52.100% valid; 0.000% abortion rate after 3.000 seconds
+Size 160: 52.640% valid; 0.000% abortion rate after 3.000 seconds
+Size 161: 52.630% valid; 0.000% abortion rate after 3.000 seconds
+Size 162: 52.700% valid; 0.000% abortion rate after 3.000 seconds
+Size 163: 53.020% valid; 0.000% abortion rate after 3.000 seconds
+Size 164: 51.830% valid; 0.000% abortion rate after 3.000 seconds
+Size 165: 52.380% valid; 0.000% abortion rate after 3.000 seconds
+Size 166: 52.930% valid; 0.000% abortion rate after 3.000 seconds
+Size 167: 52.540% valid; 0.000% abortion rate after 3.000 seconds
+Size 168: 51.640% valid; 0.000% abortion rate after 3.000 seconds
+Size 169: 52.910% valid; 0.000% abortion rate after 3.000 seconds
+Size 170: 53.090% valid; 0.000% abortion rate after 3.000 seconds
+Size 171: 52.500% valid; 0.000% abortion rate after 3.000 seconds
+Size 172: 51.990% valid; 0.000% abortion rate after 3.000 seconds
+Size 173: 53.300% valid; 0.000% abortion rate after 3.000 seconds
+Size 174: 52.430% valid; 0.000% abortion rate after 3.000 seconds
+Size 175: 53.020% valid; 0.000% abortion rate after 3.000 seconds
+Size 176: 53.420% valid; 0.000% abortion rate after 3.000 seconds
+Size 177: 52.380% valid; 0.000% abortion rate after 3.000 seconds
+Size 178: 52.890% valid; 0.000% abortion rate after 3.000 seconds
+Size 179: 52.340% valid; 0.000% abortion rate after 3.000 seconds
+Size 180: 53.010% valid; 0.000% abortion rate after 3.000 seconds
+Size 181: 52.790% valid; 0.000% abortion rate after 3.000 seconds
+Size 182: 53.030% valid; 0.000% abortion rate after 3.000 seconds
+Size 183: 52.820% valid; 0.000% abortion rate after 3.000 seconds
+Size 184: 51.910% valid; 0.000% abortion rate after 3.000 seconds
+Size 185: 52.750% valid; 0.000% abortion rate after 3.000 seconds
+Size 186: 53.330% valid; 0.000% abortion rate after 3.000 seconds
+Size 187: 53.480% valid; 0.000% abortion rate after 3.000 seconds
+Size 188: 52.900% valid; 0.000% abortion rate after 3.000 seconds
+Size 189: 53.520% valid; 0.000% abortion rate after 3.000 seconds
+Size 190: 52.310% valid; 0.000% abortion rate after 3.000 seconds
+Size 191: 53.770% valid; 0.000% abortion rate after 3.000 seconds
+Size 192: 52.030% valid; 0.000% abortion rate after 3.000 seconds
+Size 193: 52.780% valid; 0.000% abortion rate after 3.000 seconds
+Size 194: 52.770% valid; 0.000% abortion rate after 3.000 seconds
+Size 195: 53.920% valid; 0.000% abortion rate after 3.000 seconds
+Size 196: 53.660% valid; 0.000% abortion rate after 3.000 seconds
+Size 197: 52.980% valid; 0.000% abortion rate after 3.000 seconds
+Size 198: 52.830% valid; 0.000% abortion rate after 3.000 seconds
+Size 199: 52.230% valid; 0.000% abortion rate after 3.000 seconds
+Size 200: 53.360% valid; 0.000% abortion rate after 3.000 seconds
+Size 201: 53.850% valid; 0.000% abortion rate after 3.000 seconds
+Size 202: 52.900% valid; 0.000% abortion rate after 3.000 seconds
+Size 203: 53.510% valid; 0.000% abortion rate after 3.000 seconds
