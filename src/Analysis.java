@@ -16,17 +16,17 @@ public class Analysis {
         // Variables
         int repetitions = 1;   // Useful if minSize = maxSize, for large sizes (default is 1)
         int jumpSize = 1;
-        int minSize = 6;
-        int maxSize = 200;
-        int samples = 1;
+        int minSize = 1;
+        int maxSize = 214;
+        int samples = 10000;
         int maxPropositions = 2;
-        String system = "K";
-        String setOfConnectives = "~, |, &, ->, <->, <>, []";
+        String logic = "K";
+        String setOfConnectives = "~, |, <>";
 
         String separator = "=================================================";
         String header = "\n\n\n\n" + separator + "\n\t\t\t----- NEW ANALYSIS -----" +
                 "\nSamples = " + samples + "\nMax # of propositions = " + maxPropositions +
-                "\nSystem = " + system + "\nSet of connectives = " + setOfConnectives +
+                "\nLogic = " + logic + "\nSet of connectives = " + setOfConnectives +
                 "\n" + separator + "\n";
         write(header, outputPath);
 
@@ -37,7 +37,7 @@ public class Analysis {
         for (int i = 0; i < repetitions; i += jumpSize) {
             for (int size = minSize; size <= maxSize; size++) {
                 results = prover.proveRandomFormulas(samples, size,
-                        maxPropositions, new ModalSystem(system), false);
+                        maxPropositions, new ModalLogic(logic), false);
                 double validityProportion = calculateValidityProportion(results.getResults());
                 write(("Size " + size + ": " + formatter.format((validityProportion * 100)) + "% valid; " + formatter.format(results.getAbortionRate()) +
                         "% abortion rate after " + formatter.format(results.getTimeoutLimit()) + " seconds\n"),
